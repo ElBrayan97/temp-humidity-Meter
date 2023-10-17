@@ -1,6 +1,5 @@
 #include <SPI.h>
 #include <Wire.h>
-#include <Adafruit_Sensor.h>
 #include <DHT.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -30,10 +29,10 @@ void setup() {
 void loop() {
   int tempIn = getTempIn();
   int humIn = getHumIn();
-  int tempOut = getTempOut();
-  int humOut = getHumOut();
   printInfoIn(tempIn, humIn);
   display.clearDisplay();
+  int tempOut = getTempOut();
+  int humOut = getHumOut();
   printInfoOut(tempOut, humOut);
 }
 
